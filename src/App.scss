@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Krona+One|Muli&display=swap');
+
+$dark: #1E1F34;
+$main: #4F3B9E;
+$textColor: #111D28;
+$accent: #FE4F0B;
+$light: #FAFAFC;
+$title: 'Krona One', sans-serif;
+$text: 'Muli', sans-serif;
+
+html {
+  color: $text !important;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+a {
+  color: $textColor !important;
+  font-family: $text;
+  text-decoration: none !important;
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
