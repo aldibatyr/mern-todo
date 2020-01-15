@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Row, Col, Form } from 'react-bootstrap';
+import axios from 'axios';
 
 
 const CreateTodo = () => {
@@ -12,17 +13,22 @@ const CreateTodo = () => {
 
   const submitAction = (e) => {
     e.preventDefault();
-
-
-    console.log(description, responsible, priority, completed);
+    const newTodo = {
+      description,
+      responsible,
+      priority,
+      completed
+    };
+    axios.post('http://localhost:8000/todos/add', newTodo)
+      .then(res => console.log('done deal', res.data))
     setDescription('');
     setResponsible('');
     setPriority('');
     setCompleted(false);
-  }
+  };
   return (
     <div className="create-view">
-      <Row>
+      <Row className="view-header">
         <h3>Create New Todo</h3>
       </Row>
       <Row>

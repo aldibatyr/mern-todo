@@ -17,4 +17,12 @@ a {
   text-align: center;
 }
 
+.form-container {
+  margin: 10px auto;
+}
+
+.view-header h3 {
+  margin: 10px auto;
+}
+
 /*# sourceMappingURL=App.css.map */
